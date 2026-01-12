@@ -1,0 +1,14 @@
+body {
+    border: 1px solid red;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 60vh;
+    width: 75vh;
+}
+
+.sign-up-form {
+    background-color: white;
+}
