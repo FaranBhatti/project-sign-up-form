@@ -1,8 +1,8 @@
 :root {
     --card-height: 90vh;
     --card-width: 75vw;
-    --left-banner-width: calc(var(--card-width) * 0.2);
-    --signup-form-width: calc(var(--card-width) * 0.8);
+    --left-banner-width: calc(var(--card-width) * 0.3);
+    --signup-form-width: calc(var(--card-width) * 0.7);
 }
 
 * {
@@ -30,7 +30,6 @@ body {
 }
 
 .left-banner {
-    border: 1px solid red;
     background-color: white;
 
     width: var(--left-banner-width);
