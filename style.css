@@ -1,29 +1,44 @@
-html {
-    background-color: black;
+:root {
+    --card-height: 90vh;
+    --card-width: 75vw;
+    --left-banner-width: calc(var(--card-width) * 0.2);
+    --signup-form-width: calc(var(--card-width) * 0.8);
 }
-.main-card {
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: black;
     display: flex;
+    min-height: 100vh;
 
     justify-content: center;
     align-items: center;
+}
 
-    height: 100vh;
-    width: 100vw;
+.main-card {
+    display: flex;
+    
+    height: var(--card-height);
+    width: var(--card-width);
+    max-width: 1200px; /* prevent card from getting too wide on large screens */
+    max-height: 800px; /* prevent card from being too tall */
 }
 
 .left-banner {
-    border: 1px solid green;
-    background-color: white;
-
-
-    height: 50vh;
-    width: 20vw;
-}
-
-.sign-up-form {
     border: 1px solid red;
     background-color: white;
 
-    height: 50vh;
-    width: 50vw;
+    width: var(--left-banner-width);
+}
+
+.sign-up-form {
+    border: 1px solid blue;
+    background-color: white;
+
+    width: var(--signup-form-width);
 }
