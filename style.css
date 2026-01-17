@@ -25,8 +25,8 @@ body {
     
     height: var(--card-height);
     width: var(--card-width);
-    max-width: 1400px; /* prevent card from getting too wide on large screens */
-    max-height: 1000px; /* prevent card from being too tall */
+    max-width: 1400px;
+    max-height: 1000px;
 }
 
 .left-banner {
