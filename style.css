@@ -1,7 +1,7 @@
 :root {
     --card-height: 90vh;
     --card-width: 75vw;
-    --left-banner-width: calc(var(--card-width) * 0.3);
+    --left-banner-width: calc(var(--card-width) * 0.4);
     --signup-form-width: calc(var(--card-width) * 0.7);
 }
 
@@ -25,14 +25,21 @@ body {
     
     height: var(--card-height);
     width: var(--card-width);
-    max-width: 1200px; /* prevent card from getting too wide on large screens */
-    max-height: 800px; /* prevent card from being too tall */
+    max-width: 1400px; /* prevent card from getting too wide on large screens */
+    max-height: 1000px; /* prevent card from being too tall */
 }
 
 .left-banner {
     background-color: white;
 
     width: var(--left-banner-width);
+}
+
+.left-banner img {
+    display: block;
+
+    max-width: 100%;
+    height: 100%;
 }
 
 .sign-up-form {
