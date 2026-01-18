@@ -1,13 +1,40 @@
 :root {
+    /* Layout */
     --card-height: 90vh;
     --card-width: 75vw;
+    --card-max-width: 1400px;
+    --card-max-height: 1000px;
     --left-banner-width: calc(var(--card-width) * 0.4);
     --signup-form-width: calc(var(--card-width) * 0.7);
+
+    /* Colors */
+    --color-bg-body: black;
+    --color-bg-form: white;
+    --color-banner-overlay: rgba(128, 128, 128, 0.2);
+    --color-text-light: white;
+
+    /* Typography */
+    --font-display: avara, Georgia, 'Times New Roman', Times, serif;
+    --font-body: Arial, Helvetica, sans-serif;
+
+    /* Spacing */
+    --banner-top-position: 25%;
+    --banner-padding-y: 20px;
+    --banner-logo-size: 100px;
+    --banner-heading-offset: 18px;
+
+    /* Font sizes */
+    --font-size-banner: 5rem;
+
+    font-size: 62.5%;
 }
 
 @font-face {
     font-family: avara;
     src: url(assets/fonts/Avara.ttf);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -17,12 +44,13 @@
 }
 
 body {
-    background-color: black;
     display: flex;
     min-height: 100vh;
-
     justify-content: center;
     align-items: center;
+
+    background-color: var(--color-bg-body);
+    font-family: var(--font-body);
 }
 
 .main-card {
@@ -30,17 +58,44 @@ body {
     
     height: var(--card-height);
     width: var(--card-width);
-    max-width: 1400px;
-    max-height: 1000px;
+    max-width: var(--card-max-width);
+    max-height: var(--card-max-height);
 }
 
 .left-banner {
     background-image: url(assets/images/large-background-image.jpg);
     background-size: cover;
-
-    color: white;
-    font-family: avara;
     width: var(--left-banner-width);
+
+    position: relative;
+}
+
+.banner-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: var(--color-banner-overlay);
+    color: var(--color-text-light);
+    font-family: var(--font-display);
+    font-size: var(--font-size-banner);
+
+    position: absolute;
+    top: var(--banner-top-position);
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+}
+
+.banner-container img {
+    width: var(--banner-logo-size);
+    height: auto;
+}
+
+.banner-container h1 {
+    margin-top: var(--banner-heading-offset);
 }
 
 .sign-up-form {
