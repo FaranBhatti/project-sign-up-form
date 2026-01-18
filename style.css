@@ -68,6 +68,8 @@ body {
     width: var(--left-banner-width);
 
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .banner-container {
@@ -103,4 +105,33 @@ body {
     background-color: white;
 
     width: var(--signup-form-width);
+}
+
+.left-banner footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    padding: 2px;
+
+    color: var(--color-text-light);
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
+    font-family: var(--font-body);
+}
+
+.left-banner footer a,
+.left-banner footer a:visited {
+    color: var(--color-text-light);
+    text-decoration: none;
+}
+
+.left-banner footer a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.left-banner footer a:active {
+    opacity: 0.6;
 }
