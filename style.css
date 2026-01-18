@@ -5,6 +5,11 @@
     --signup-form-width: calc(var(--card-width) * 0.7);
 }
 
+@font-face {
+    font-family: avara;
+    src: url(assets/fonts/Avara.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +39,7 @@ body {
     background-size: cover;
 
     color: white;
+    font-family: avara;
     width: var(--left-banner-width);
 }
 
