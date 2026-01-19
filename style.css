@@ -22,9 +22,21 @@
     --banner-padding-y: 20px;
     --banner-logo-size: 100px;
     --banner-heading-offset: 18px;
+    --form-fields-padding-left: 3%;
+    --form-fields-gap-between: 15rem;
+    --form-row-gap: 2rem;
+    --form-fields-heading-top: 2%;
 
     /* Font sizes */
     --font-size-banner: 5rem;
+    --font-size-heading: 3rem;
+    --font-size-label: 1.5rem;
+    --font-size-input: 1.7rem;
+
+    /* Input styling */
+    --input-width: 130%;
+    --input-height: 3rem;
+    --input-padding: 1.2rem;
 
     font-size: 62.5%;
 }
@@ -132,7 +144,81 @@ body {
 
 /* Right Side - Sign Up Form */
 .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
     background-color: white;
-
     width: var(--signup-form-width);
+    height: 100%;
+}
+
+/* First section - Sign Up Form */
+.sign-up-form .call-to-action {
+    display: flex;
+    flex-direction: column;
+
+    flex: 0 0 35%;
+    background-color: rgb(245, 245, 245);
+}
+
+.sign-up-form .call-to-action h1 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Second section - Sign Up Form */
+.sign-up-form .form-fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-size: var(--font-size-label);
+    color: rgb(90, 90, 90);
+}
+
+input {
+    width: var(--input-width);
+    height: var(--input-height);
+    padding: var(--input-padding);
+    font-size: var(--font-size-input);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+.form-row {
+    display: flex;
+    gap: var(--form-fields-gap-between);
+    padding-left: var(--form-fields-padding-left);
+}
+
+.sign-up-form .form-fields h1 {
+    padding-left: var(--form-fields-padding-left);
+    font-size: var(--font-size-heading);
+    position: absolute;
+    top: var(--form-fields-heading-top);
+}
+
+.form-container-flex {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-row-gap);
+}
+
+.sign-up-form .form-actions {
+    display: flex;
+    flex-direction: column;
+
+    flex: 0 0 35%;
+    background-color: rgb(245, 245, 245);
 }
