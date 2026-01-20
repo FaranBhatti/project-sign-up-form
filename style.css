@@ -1,11 +1,11 @@
 :root {
     /* Layout */
     --card-height: 90vh;
-    --card-width: 75vw;
-    --card-max-width: 1400px;
-    --card-max-height: 1000px;
-    --left-banner-width: calc(var(--card-width) * 0.4);
-    --signup-form-width: calc(var(--card-width) * 0.7);
+    --card-width: 85vw;
+    --card-max-width: 140rem;
+    --card-max-height: 100rem;
+    --left-banner-width: 40%;
+    --signup-form-width: 60%;
 
     /* Colors */
     --color-bg-body: black;
@@ -23,43 +23,43 @@
     /* Typography */
     --font-display: avara, Georgia, 'Times New Roman', Times, serif;
     --font-body: Arial, Helvetica, sans-serif;
-    --font-size-banner: 5rem;
+    --font-size-banner: clamp(2.5rem, 8vw, 5rem);
     --font-size-heading: 2.3rem;
     --font-size-call-to-action: 1.2rem;
     --font-size-label: 1.5rem;
     --font-size-input: 1.5rem;
-    --font-size-footer: clamp(0.8rem, 1vw, 1.2rem);
+    --font-size-footer: 1rem;
 
     /* Spacing */
     --banner-top-position: 25%;
-    --banner-padding-y: 20px;
-    --banner-logo-size: 100px;
-    --banner-heading-offset: 18px;
-    --footer-padding: 2px;
+    --banner-padding-y: 2rem;
+    --banner-logo-size: clamp(5rem, 15vw, 10rem);
+    --banner-heading-offset: 1.8rem;
+    --footer-padding: 0.2rem;
     --form-fields-padding-left: 5%;
-    --form-fields-gap-between: 15rem;
+    --form-fields-gap-between: clamp(2rem, 5vw, 15rem);
     --form-row-gap: 2rem;
     --form-fields-heading-top: 4%;
     --section-flex-basis: 35%;
 
     /* Input styling */
-    --input-width: 130%;
+    --input-width: 100%;
     --input-height: 3rem;
     --input-padding: 1.2rem;
-    --input-border-radius: 5px;
-    --input-border-width: 1px;
-    --input-shadow: 2px 2px 5px var(--color-shadow);
+    --input-border-radius: 0.5rem;
+    --input-border-width: 0.1rem;
+    --input-shadow: 0.2rem 0.2rem 0.5rem var(--color-shadow);
 
     /* Button styling */
-    --button-width: 200px;
-    --button-height: 50px;
-    --button-border-radius: 4px;
+    --button-width: clamp(15rem, 20vw, 20rem);
+    --button-height: clamp(4rem, 5vw, 5rem);
+    --button-border-radius: 0.4rem;
 
     /* Opacity values */
     --opacity-hover: 0.8;
     --opacity-active: 0.6;
 
-    font-size: 62.5%;
+    font-size: clamp(40%, 1vw, 62.5%);
 }
 
 @font-face {
@@ -88,11 +88,12 @@ body {
 
 .main-card {
     display: flex;
-    
+
     height: var(--card-height);
     width: var(--card-width);
     max-width: var(--card-max-width);
     max-height: var(--card-max-height);
+    overflow: hidden;
 }
 
 /* Left Banner - Splash Screen */
@@ -111,6 +112,7 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
+    gap: 1rem;
 
     background-color: var(--color-banner-overlay);
     color: var(--color-text-light);
@@ -121,12 +123,14 @@ body {
     top: var(--banner-top-position);
     left: 0;
     right: 0;
-    padding: var(--banner-padding-y) 0;
+    padding: var(--banner-padding-y) 1rem;
+    overflow: hidden;
 }
 
 .banner-container img {
     width: var(--banner-logo-size);
     height: auto;
+    flex-shrink: 0;
 }
 
 .banner-container h1 {
@@ -207,6 +211,7 @@ label {
 
 input {
     width: var(--input-width);
+    max-width: 100%;
     height: var(--input-height);
     padding: var(--input-padding);
     font-size: var(--font-size-input);
@@ -221,15 +226,21 @@ input:invalid {
 
 .form-row {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--form-fields-gap-between);
     padding-left: var(--form-fields-padding-left);
+    padding-right: var(--form-fields-padding-left);
+}
+
+.form-field {
+    flex: 1 1 15rem;
+    min-width: 0;
 }
 
 .sign-up-form .form-fields h1 {
     padding-left: var(--form-fields-padding-left);
     font-size: var(--font-size-heading);
-    position: absolute;
-    top: var(--form-fields-heading-top);
+    margin-bottom: 2rem;
 }
 
 .form-container-flex {
